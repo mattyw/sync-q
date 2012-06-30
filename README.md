@@ -12,6 +12,8 @@ The are 4 basic operations
 * Get a value from the queue without blocking
 * Get a value from the queue blocking until a value is available
 
+Available from clojars: http://clojars.org/sync-q
+
 ## Basic Usage
 
     (use 'sync-q.core)
