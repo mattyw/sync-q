@@ -29,12 +29,12 @@
 (defn get-wait 
     "Get the first item in the queue. If one isn't available block until one is"
     [q]
-    (let [prom @(first @q)]
+    (let [prom @(peek @q)]
         (swap! q pop)
         prom))
 
 (defn- get-and-pop [q]
-    (let [prom (first @q)]
+    (let [prom (peek @q)]
         (swap! q pop)
         @prom))
 
